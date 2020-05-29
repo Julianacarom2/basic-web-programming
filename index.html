@@ -7,20 +7,45 @@
             {
                 background-color: aqua;
             }
+            .mitexto
+            {
+                font-size: 30px;
+            }
         </style>
     <body>
          <h1> Calcula tu peso en marte </h1>  
-         <p> en esta pagina podras calcular tu peso en otro planeta </p>
+         <p>  esta pagina podras calcular tu peso en otro planeta </p>
+
          <script>
-             let usuario = prompt ("Cual es tu peso? : ")
-             let peso = usuario;
-             let g_tierr= 9.8;
-             let g_marte = 3.7;
-             let g_jupiter = 24.8;
-             var peso_final;
-             peso_final = usuario * g_marte/ g_tierr;
-             peso_final = parseInt (peso_final);
-             document.write ("Tu peso en marte es  : <strong> " + peso_final + " kilos </strong>");
+            let usuario = prompt ("Cual es tu peso? : ");
+            let planeta = parseInt (prompt("elige el planeta:\n 1 = Marte\n 2 = Júpiter "));
+            let peso = parseInt(usuario);
+            let g_tierr= 9.8;
+            let g_marte = 3.7;
+            let g_jupiter = 24.8;
+            let peso_final;
+            let nombre;
+
+            if (planeta ==1) 
+            {
+                peso_final = parseInt (usuario * g_marte/ g_tierr) + " Kilos"; 
+                nombre = "Marte"
+            }
+            else if (planeta ==2 ) 
+            {
+                peso_final = parseInt (usuario * g_jupiter/ g_tierr)  + " Kilos";
+                nombre = "Júpiter"
+            }
+            else 
+            {
+                console.log("entreee")
+                peso_final = "INGRESA LOS DATOS CORRECTAMENTE";
+                nombre = "Kripton"
+            }
+
+            //peso_final = parseInt (peso_final);
+            document.write (`Tu peso en ${nombre} es : ${peso_final} `);
+            
          </script>
 
     </body>
