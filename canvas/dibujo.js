@@ -6,19 +6,27 @@ let lienzo =d.getContext("2d");
 let linea = 30;
 let l = 0;
 let yi, xf;
+let x,  y;
 let color_1 = "#FAA";
+let color_2 = "yellow";
 
 // ciclo for utiliza 3 paramentros, se  separa cada parametro con ;, l++ es igual a l= l+1
 for ( l=0 ; l < linea ; l++)
-{
-    yi = 10 * l;
-    xf = 10 * (l + 1);
+{   
+    x = 10 * (l+1);
+    y = 10 * l;
+    yi = 10 * (l+1);
+    xf = 10 * l;
     dibujarLinea (color_1, 0, yi, xf,300);
+    dibujarLinea (color_2, 300, yi, xf,0);
+    
    
 }
 
 dibujarLinea (color_1, 1,1,1,299);
 dibujarLinea (color_1, 1,299,299,299);
+dibujarLinea (color_2, 299,1,1,1);
+dibujarLinea (color_2, 299,299,299,1);
 
 
 function dibujarLinea (color, x_ini, y_ini, x_fin, y_fin)
