@@ -8,13 +8,13 @@ let l = 0;
 let yi, xf;
 let color_1 = "#FAA";
 
-while ( l < linea)
+// ciclo for utiliza 3 paramentros, se  separa cada parametro con ;, l++ es igual a l= l+1
+for ( l=0 ; l < linea ; l++)
 {
     yi = 10 * l;
     xf = 10 * (l + 1);
     dibujarLinea (color_1, 0, yi, xf,300);
-    l = l+1;
-
+   
 }
 
 dibujarLinea (color_1, 1,1,1,299);
