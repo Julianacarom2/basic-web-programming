@@ -14,9 +14,9 @@ let d = document.getElementById ("dibujito");
 // getContexte funcion del obejto canvas, permite obetner area donde voy a dibjuar 3D o 2D
 let lienzo =d.getContext("2d");
 
-dibujarLinea ("red", 100, 0, 150,200);
-dibujarLinea ("red", 100, 0, 50,200);
-dibujarLinea ("red", 75, 100, 126,100);
+dibujarLinea ("pink", 100, 0, 150,200);
+dibujarLinea ("purple", 100, 0, 50,200);
+dibujarLinea ("grey", 75, 100, 126,100);
 
 
 
