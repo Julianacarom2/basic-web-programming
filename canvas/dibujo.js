@@ -1,5 +1,9 @@
-
 // para obtener el id del archivo html se coloca document. getElementById. ES UN METODOO DEL DOCUMENTO QUE TRAE ELEMENTO A TRAVES DEL ID. PASAMOS PARAMETRO
+let texto = document.getElementById ("texto_lineas");
+let boton = document.getElementById ("boton1");
+// responde al evento de click y se le indica cual es el nombre de la funcion por eso se pone sin ()
+boton.addEventListener("click", dibujoPorClick);
+
 let d = document.getElementById ("dibujito");
 // getContexte funcion del obejto canvas, permite obetner area donde voy a dibjuar 3D o 2D
 let lienzo =d.getContext("2d");
@@ -40,7 +44,10 @@ function dibujarLinea (color, x_ini, y_ini, x_fin, y_fin)
 
 }
 
-
+function dibujoPorClick()
+{
+    alert ("no me toques");
+}
 
 
 
